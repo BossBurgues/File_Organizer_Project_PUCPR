@@ -1,0 +1,68 @@
+/* --- ESTILOS GERAIS E BASE --- */
+body { margin: 0; padding: 0; font-family: 'Consolas', 'Courier New', monospace; background-color: #0f111a; color: #33ff33; height: 100vh; width: 100vw; overflow: hidden; }
+#root { height: 100%; }
+
+/* --- LAYOUT PRINCIPAL --- */
+.app { display: flex; flex-direction: column; height: 100%; }
+.main-content { display: flex; flex: 1; min-height: 0; }
+.left-panel { width: 300px; border-right: 1px solid #33ff33; padding: 15px; overflow-y: auto; flex-shrink: 0; }
+.right-panel { flex: 1; display: flex; flex-direction: column; padding: 15px; overflow-y: auto; min-width: 0; }
+
+/* --- HEADER --- */
+.app-header { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; border-bottom: 1px solid #33ff33; background-color: #1a1c28; }
+.app-header h1 { font-size: 24px; margin: 0; display: flex; align-items: center; gap: 10px; }
+.header-actions button { font-size: 14px; padding: 8px 15px; margin-left: 10px; border-radius: 5px; border: 1px solid #33ff33; background-color: #0f111a; color: #33ff33; cursor: pointer; transition: 0.2s; }
+.header-actions button:hover { background-color: #33ff33; color: #0f111a; }
+.header-actions button:disabled { border-color: #224422; color: #224422; cursor: not-allowed; }
+.header-actions button:disabled:hover { background-color: #0f111a; }
+.organize-btn { border-color: #ffae33; color: #ffae33; }
+.organize-btn:hover { background-color: #ffae33; color: #0f111a; }
+.delete-btn { border-color: #ff3333; color: #ff3333; }
+.delete-btn:hover { background-color: #ff3333; color: #0f111a; }
+
+/* --- FILTROS --- */
+.filters { display: flex; gap: 10px; margin-bottom: 15px; align-items: center; }
+.filters input { flex: 1; font-family: 'Consolas', monospace; font-size: 14px; padding: 8px; border-radius: 5px; border: 1px solid #33ff33; background-color: #1a1c28; color: #33ff33; }
+.filters button { padding: 8px 15px; border-radius: 5px; border: 1px solid #33ff33; background-color: #0f111a; color: #33ff33; cursor: pointer; }
+
+/* --- NAVEGADOR E TABELA --- */
+.directory-tree { list-style: none; padding: 0; margin: 0; }
+.directory-tree li span { cursor: pointer; padding: 5px; display: block; border-radius: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.directory-tree li span:hover { background-color: #1a1c28; }
+.file-table-container { flex: 1; overflow-y: auto; }
+.file-table { width: 100%; border-collapse: collapse; }
+.file-table th, .file-table td { padding: 8px; text-align: left; border-bottom: 1px solid #224422; white-space: nowrap; }
+.file-table th { cursor: pointer; }
+.file-table .selected-row { background-color: #2a2c38; }
+.file-table tr:hover { background-color: #1f212c; }
+.empty-folder-message { text-align: center; margin-top: 50px; font-style: italic; color: #557755; }
+
+/* --- PAINEL DE DETALHES --- */
+.details-panel { width: 350px; border-left: 1px solid #33ff33; padding: 15px; background-color: #1a1c28; position: relative; overflow-y: auto; flex-shrink: 0; }
+.details-panel h3 { margin-top: 0; }
+.details-panel ul { list-style: none; padding: 0; }
+.details-panel li { margin-bottom: 8px; word-break: break-all; }
+.details-panel .close-btn { position: absolute; top: 10px; right: 10px; background: none; border: none; color: #fff; cursor: pointer; font-size: 18px; }
+.details-panel .error-text { color: #ff3333; }
+
+/* --- MENU DE CONTEXTO --- */
+.context-menu { position: fixed; background-color: #1a1c28; border: 1px solid #33ff33; border-radius: 5px; list-style: none; padding: 5px 0; margin: 0; z-index: 1000; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+.context-menu li { padding: 8px 15px; cursor: pointer; }
+.context-menu li:hover { background-color: #2a2c38; }
+
+/* --- MODAIS --- */
+.modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.7); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+.modal-content { background-color: #1a1c28; padding: 25px; border-radius: 8px; border: 1px solid #33ff33; width: 400px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+.modal-content h2 { margin-top: 0; }
+.modal-actions { display: flex; flex-direction: column; gap: 15px; margin: 20px 0; }
+.modal-actions button { font-size: 16px; padding: 12px; border-radius: 5px; border: 1px solid #33ff33; background-color: #0f111a; color: #33ff33; cursor: pointer; transition: 0.2s; }
+.modal-actions button:hover { background-color: #33ff33; color: #0f111a; }
+.modal-close { margin-top: 10px; background: none; border: none; color: #ff3333; cursor: pointer; }
+
+/* --- VIEW DE DUPLICATAS --- */
+.duplicates-view { width: 100%; padding: 20px; overflow-y: auto; }
+.duplicate-group { margin-bottom: 20px; border: 1px solid #224422; padding: 10px; border-radius: 5px; }
+.duplicate-group ul { list-style: none; padding: 0; }
+
+/* --- BARRA DE STATUS --- */
+.status-bar { padding: 5px 20px; background-color: #1a1c28; border-top: 1px solid #33ff33; font-size: 12px; text-align: right; flex-shrink: 0; }

@@ -1,0 +1,7 @@
+.modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.7); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+.modal-content { background-color: #1a1c28; padding: 25px; border-radius: 8px; border: 1px solid #33ff33; width: 400px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+.modal-content h2 { margin-top: 0; }
+.modal-actions { display: flex; flex-direction: column; gap: 15px; margin: 20px 0; }
+.modal-actions button { font-size: 16px; padding: 12px; border-radius: 5px; border: 1px solid #33ff33; background-color: #0f111a; color: #33ff33; cursor: pointer; transition: 0.2s; }
+.modal-actions button:hover { background-color: #33ff33; color: #0f111a; }
+.modal-close { margin-top: 10px; background: none; border: none; color: #ff3333; cursor: pointer; }
