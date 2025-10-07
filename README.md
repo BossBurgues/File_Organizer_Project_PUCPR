@@ -1,4 +1,4 @@
-File Organizer v3.0
+# File Organizer v3.0
 
 File Organizer is a full-stack web application built to manage and organize local files efficiently and intuitively. The interface is built with React and the backend with FastAPI (Python), running on a local server.
 
