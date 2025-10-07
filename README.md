@@ -1,54 +1,70 @@
-#  File Organizer v3.0
+🖥️ File Organizer v3.0
+File Organizer is a full-stack web application built to manage and organize local files efficiently and intuitively. The interface is built with React and the backend with FastAPI (Python), running on a local server.
 
-File Organizer é uma aplicação web full-stack construída para gerenciar e organizar arquivos locais de forma eficiente e intuitiva. A interface é construída com React e o backend com FastAPI (Python), rodando em um servidor local.
+✨ Features
+File Navigation: Explore your file system with a directory tree, a detailed file table, and a button to go to the parent directory.
 
-##  Funcionalidades
+Smart Organization: Organize entire folders with one click, using predefined strategies:
 
-* **Navegação de Arquivos:** Explore seu sistema de arquivos com uma árvore de diretórios, tabela de arquivos detalhada e botão para voltar ao diretório pai.
-* **Organização Inteligente:** Organize pastas inteiras com um clique, usando estratégias pré-definidas:
-    * **Por Tipo:** Move arquivos para pastas como `Imagens`, `Documentos`, `Vídeos`, etc.
-    * **Por Data:** Agrupa arquivos em pastas por `Ano/Mês` de modificação.
-* **Ações de Arquivo:**
-    * **Lixeira Segura:** A deleção de arquivos é segura, movendo-os para uma lixeira interna (`backend/.recycle_bin`) em vez de apagar permanentemente.
-    * **Desfazer Última Organização:** A última operação de organização pode ser revertida com um único clique.
-    * **Seleção Múltipla:** Delete múltiplos arquivos de uma vez.
-* **Ferramentas Avançadas:**
-    * **Localizador de Duplicatas:** Escaneia uma pasta e suas subpastas para encontrar arquivos com conteúdo idêntico.
-* **Interface Rica:**
-    * Painel de detalhes com informações completas do arquivo (tamanho, datas, hash MD5).
-    * Menu de contexto (botão direito) para ações rápidas.
-    * Notificações "Toast" para feedback de ações.
-    * Menu de Ajuda integrado.
+By Type: Moves files into folders like Images, Documents, Videos, etc.
 
-##  Tech Stack
+By Date: Groups files into folders by modification Year/Month.
 
-* **Frontend:** React, Vite, `react-toastify`
-* **Backend:** Python, FastAPI, Uvicorn
+File Actions:
 
-##  Como Executar
+Safe Recycle Bin: File deletion is safe, moving them to an internal recycle bin (backend/.recycle_bin) instead of deleting them permanently.
 
-### Pré-requisitos
-* [Node.js](https://nodejs.org/) (versão 18+)
-* [Python](https://www.python.org/) (versão 3.9+)
+Undo Last Organization: The last organization operation can be reverted with a single click.
 
-### 1. Instalação (Apenas na primeira vez)
-* **Backend:**
-    ```bash
-    cd backend
-    python -m venv venv
-    .\venv\Scripts\activate.bat
-    pip install -r requirements.txt
-    ```
-* **Frontend:**
-    ```bash
-    cd frontend
-    npm install
-    ```
+Multiple Selection: Delete multiple files at once.
 
-### 2. Execução
-Para uma experiência completa e para evitar problemas de permissão com o sistema de arquivos do Windows, use o script de inicialização como administrador.
+Advanced Tools:
 
-1.  Navegue até a pasta raiz do projeto.
-2.  Clique com o botão direito no arquivo `run_as_admin.bat`.
-3.  Selecione **"Executar como administrador"**.
-4.  Aguarde os dois servidores iniciarem e o navegador abrir automaticamente na página da aplicação.
+Duplicate Finder: Scans a folder and its subfolders to find files with identical content.
+
+Rich Interface:
+
+Details panel with complete file information (size, dates, MD5 hash).
+
+Context menu (right-click) for quick actions.
+
+"Toast" notifications for action feedback.
+
+Integrated Help menu.
+
+🛠️ Tech Stack
+Frontend: React, Vite, react-toastify
+
+Backend: Python, FastAPI, Uvicorn
+
+🚀 How to Run
+Prerequisites
+Node.js (version 18+)
+
+Python (version 3.9+)
+
+1. Installation (First time only)
+Backend:
+
+Bash
+
+cd backend
+python -m venv venv
+.\venv\Scripts\activate.bat
+pip install -r requirements.txt
+Frontend:
+
+Bash
+
+cd frontend
+npm install
+2. Execution
+For a complete experience and to avoid permission issues with the Windows file system, use the startup script as an administrator.
+
+Navigate to the project's root folder.
+
+Right-click on the run_as_admin.bat file.
+
+Select "Run as administrator".
+
+Wait for the two servers to start and for the browser to automatically open the application page.
